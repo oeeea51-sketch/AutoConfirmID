@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.25)
 
 project(AutoConfirmID VERSION 1.0.0 LANGUAGES CXX)
 
+# Говорим Geode, что файлы лежат прямо в главной папке, а не в src
+set(GEODE_CUSTOM_SRC_DIR .)
+
 find_package(geode REQUIRED)
 
 add_geode_mod(
@@ -10,5 +13,4 @@ add_geode_mod(
     mod.json
 )
 
-# ИСПРАВЛЕНО: Убрали точку со слэшем, теперь робот точно найдет файл!
 target_sources(${PROJECT_NAME} PRIVATE main.cpp)
