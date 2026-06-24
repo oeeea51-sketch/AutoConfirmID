@@ -10,4 +10,5 @@ add_geode_mod(
     mod.json
 )
 
-target_sources(${PROJECT_NAME} PRIVATE main.cpp)
+# Робот теперь будет искать код прямо на главной странице!
+target_sources(${PROJECT_NAME} PRIVATE ./main.cpp)
