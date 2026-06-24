@@ -10,5 +10,5 @@ add_geode_mod(
     mod.json
 )
 
-# Робот теперь будет искать код прямо на главной странице!
-target_sources(${PROJECT_NAME} PRIVATE ./main.cpp)
+# ИСПРАВЛЕНО: Убрали точку со слэшем, теперь робот точно найдет файл!
+target_sources(${PROJECT_NAME} PRIVATE main.cpp)
